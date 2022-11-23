@@ -11,3 +11,7 @@ const myFavFood : {
 } = {name: "spag",
     preference: 1    
 }
+
+const myHobbies : string[] = ["coding", "playing football", "solving problems"]
+const mixArr : any[] = ["coding", 1,true]
+
