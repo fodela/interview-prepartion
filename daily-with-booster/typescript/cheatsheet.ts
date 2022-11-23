@@ -15,3 +15,7 @@ const myFavFood : {
 const myHobbies : string[] = ["coding", "playing football", "solving problems"]
 const mixArr : any[] = ["coding", 1,true]
 
+// tuple here can be thought of as an array of only two element
+const myTuple: [string, number] = ["rating",4.9]
+
+
