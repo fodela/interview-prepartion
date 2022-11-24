@@ -23,4 +23,8 @@ enum Role {
     ADMIN, READ_ONLY ,AUTHOR
 }
 
+// Any -> avoid as much as possible
+let myAny;
+let myAny1 : any;
+
 
