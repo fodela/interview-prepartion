@@ -18,4 +18,9 @@ const mixArr : any[] = ["coding", 1,true]
 // tuple here can be thought of as an array of only two element
 const myTuple: [string, number] = ["rating",4.9]
 
+// enums
+enum Role {
+    ADMIN, READ_ONLY ,AUTHOR
+}
+
 
