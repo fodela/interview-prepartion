@@ -27,4 +27,9 @@ enum Role {
 let myAny;
 let myAny1 : any;
 
+// Union
+let myUnion : string | number | boolean 
+myUnion = "hello"
+myUnion = 1
+myUnion = true
 
