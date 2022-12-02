@@ -59,6 +59,7 @@ const todoapp: React.FC = () => {
       )
 }
     </ul>
+    <AddTodo dispatch={dispatchTodos}/>
     </>
     
   )
