@@ -51,14 +51,7 @@ const todoapp: React.FC = () => {
   return (
     <>
     <TodoFilter dispatch={dispatchFilter}/>
-    <ul>
-      {
-      filteredTodos.map(todo=>(
-        <Todo todo={todo} dispatch={dispatchTodos}/>
-      )
-      )
-}
-    </ul>
+    <TodoList todos={filteredTodos} dispatch={dispatchTodos}/>
     <AddTodo dispatch={dispatchTodos}/>
     </>
     
