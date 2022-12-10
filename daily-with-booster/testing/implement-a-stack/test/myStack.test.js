@@ -10,9 +10,17 @@ describe("my stack implementation", () => {
     expect(myStack.top).toBe(-1);
     expect(myStack.items).toEqual({});
   });
+
   it("can push to the top", () => {
     myStack.push("🤯");
     expect(myStack.top).toBe(0);
     expect(myStack.peek).toBe("🤯");
+  });
+
+  it("pop off an item from the stack", () => {
+    myStack.push("😄");
+    myStack.pop();
+    expect(myStack.top).toBe(-1);
+    expect(myStack.peek).toBe(undefined);
   });
 });
