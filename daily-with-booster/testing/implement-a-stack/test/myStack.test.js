@@ -22,5 +22,11 @@ describe("my stack implementation", () => {
     myStack.pop();
     expect(myStack.top).toBe(-1);
     expect(myStack.peek).toBe(undefined);
+
+    myStack.push("😸");
+    myStack.push("🐶");
+    myStack.pop();
+    expect(myStack.top).toBe(0);
+    expect(myStack.peek).toBe("😸");
   });
 });
