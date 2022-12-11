@@ -29,4 +29,12 @@ describe("my stack implementation", () => {
     expect(myStack.top).toBe(0);
     expect(myStack.peek).toBe("😸");
   });
+
+  it("has a size", () => {
+    myStack.push("😸");
+    expect(myStack.size).toBe(1);
+    myStack.push("🐶");
+    myStack.push("😄");
+    expect(myStack.size).toBe(3);
+  });
 });
