@@ -18,16 +18,12 @@ const Optimization = () => {
   ]);
   const [text, setText] = useState("");
 
-  const handleText = (event: InputEvent) => {
-    console.log(event.target.value);
-    setText(event.target!.value);
-  };
   const addUserHandler = () => {};
   const removeUserHandler = useCallback(() => () => {}, [users]);
 
   return (
     <div>
-      <input type="text" onChange={handleText} />
+      <input type="text" onChange={(event) => setText(event.target.value)} />
       <button onClick={addUserHandler}>Add User</button>
 
       <List list={users} onRemove={removeUserHandler}></List>
