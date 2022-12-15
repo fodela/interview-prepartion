@@ -19,6 +19,8 @@ useEffect(()=>{
 ```
 5. Only once => same as 4 but in this case, the if statement make set the dependent variable false
 6.When cleanup is needed => return a function that perform the clean up. -> return clearInterval(intervalName)
+
+
 */
 
 import { NextComponentType } from "next";
@@ -65,8 +67,8 @@ const Toggler: React.FC<togglerProps> = ({ toggle, toggleHandler }) => {
       </form>
 
       {toggle && <div>{title}</div>}
-
-      <h2>{timer}</h2>
+      <p>10 seconds stopwatch</p>
+      <h2>00 : {timer}</h2>
     </div>
   );
 };
