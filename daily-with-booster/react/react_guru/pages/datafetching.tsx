@@ -1,31 +1,11 @@
 import axios from "axios";
 import React, { FormEvent, useEffect, useState } from "react";
+import useHackerNewsApi from "../customHooks/useHackerNewsApi";
 
 const DataFetching = () => {
-  const [url, setUrl] = useState(
-    "https://hn.algolia.com/api/v1/search?query=redux"
-  );
-  const [data, setData] = useState({ hits: [] });
-  const [isLoading, setIsLoading] = useState(false);
-  const [isFetchError, setIsFetchError] = useState(false);
   const [query, setQuery] = useState("redux");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsFetchError(false);
-        setIsLoading(true);
-        console.log("fetching data...");
-        const result = await axios(url);
-        setData(result.data);
-      } catch (err) {
-        console.log(err);
-        setIsFetchError(true);
-      }
-      setIsLoading(false);
-    };
-    fetchData();
-  }, [url]);
+  const [setUrl, { data, isError, isLoading }] = useHackerNewsApi();
 
   const handleFetch = (event: FormEvent, query: string) => {
     event.preventDefault();
@@ -40,7 +20,7 @@ const DataFetching = () => {
       <div>
         {isLoading ? (
           <div>Loading... Please wait</div>
-        ) : isFetchError ? (
+        ) : isError ? (
           <div>An error occured</div>
         ) : (
           <ul>
